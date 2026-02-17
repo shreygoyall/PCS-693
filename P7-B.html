@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<body> 
+
+<h3>NAME: SHREY GOYAL <br> ROLL NO.: 51</h3> 
+
+Enter Age: 
+
+<input id="age"> 
+
+<button onclick="check()">Submit</button> 
+
+<p id="ans"></p> 
+
+<script> 
+
+function check() 
+
+{ 
+
+    var x = document.getElementById("age").value; 
+
+    if(x >= 15 && x <= 19) 
+
+    { 
+
+        document.getElementById("ans").innerHTML = "Age is between 15 and 19"; 
+
+    } 
+
+    else 
+
+    { 
+
+        document.getElementById("ans").innerHTML = "Age is not between 15 and 19"; 
+
+    } 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 
