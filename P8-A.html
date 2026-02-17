@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Methods Demo</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 8px;
+            cursor: pointer;
+        }
+
+        #output{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        let newwindow;
+
+        function showAlert(){
+            window.alert("Hello! This is alert()");
+        }
+
+        function showPrompt(){
+            let name = window.prompt("Enter your name:");
+            if(name !== null){
+                document.getElementById("output").innerHTML = "You entered: " + name;
+            }
+        }
+
+        function showConfirm(){
+            let result = window.confirm("Do you want to continue?");
+            document.getElementById("output").innerHTML = result ? "User clicked OK" : "User clicked Cancel";
+        }
+
+        function openWindow(){
+            newwindow = window.open("https://www.google.com", "_blank", "width=500,height=400");
+        }
+
+        function closeWindow(){
+            if(newwindow){
+                newwindow.close();
+            }
+            else{
+                alert("No window opened yet!");
+            }
+        }
+
+        function printPage(){
+            window.print();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h3>NAME: SHREY GOYAL<br>ROLL NO.: 51</h3>
+    <h2>Window Object Methods</h2>
+
+    <button onclick="showAlert()">alert()</button>
+    <button onclick="showPrompt()">prompt()</button>
+    <button onclick="showConfirm()">confirm()</button>
+    <button onclick="openWindow()">open()</button>
+    <button onclick="closeWindow()">close()</button>
+    <button onclick="printPage()">print()</button>
+
+    <div id="output"></div>
+
+</body>
+</html>
