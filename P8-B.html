@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Window Object Methods Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>NAME: SHREY GOYAL <br> ROLL NO.: 51</h3>
+    <h2>Window Object Methods</h2>
+
+    <button id="alertBtn">Show Alert</button>
+    <button id="promptBtn">Show Prompt</button>
+    <button id="confirmBtn">Show Confirm</button>
+    <button id="openBtn">Open New Window</button>
+    <button id="closeBtn">Close New Window</button>
+    <button id="printBtn">Print Page</button>
+
+    <div id="output"></div>
+
+    <script>
+        let newWindow;
+
+        function showAlert() {
+            alert("This is an alert message!");
+        }
+
+        function showPrompt() {
+            let name = window.prompt("Please enter your name:");
+            if (name !== null) {
+                document.getElementById("output").innerHTML = "You entered: " + name;
+            }
+        }
+
+        function showConfirm() {
+            let result = window.confirm("Do you want to proceed?");
+            document.getElementById("output").innerHTML =
+                result ? "User clicked OK" : "User clicked Cancel";
+        }
+
+        function openWindow() {
+            newWindow = window.open("https://www.example.com", "_blank", "width=500,height=400");
+        }
+
+        function closeWindow() {
+            if (newWindow) {
+                newWindow.close();
+            } else {
+                alert("No window open yet!");
+            }
+        }
+
+        function printPage() {
+            window.print();
+        }
+
+        document.getElementById("alertBtn").addEventListener("click", showAlert);
+        document.getElementById("promptBtn").addEventListener("click", showPrompt);
+        document.getElementById("confirmBtn").addEventListener("click", showConfirm);
+        document.getElementById("openBtn").addEventListener("click", openWindow);
+        document.getElementById("closeBtn").addEventListener("click", closeWindow);
+        document.getElementById("printBtn").addEventListener("click", printPage);
+    </script>
+
+</body>
+</html>
