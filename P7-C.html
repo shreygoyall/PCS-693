@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<body> 
+
+<h3>NAME: SHREY GOYAL <br> ROLL NO.: 51</h3> 
+
+Enter a character: 
+
+<input id="ch"> 
+
+<button onclick="checkVowel()">Check</button> 
+
+<p id="result"></p> 
+
+<script> 
+
+function checkVowel() 
+
+{ 
+
+    var ch = document.getElementById("ch").value; 
+
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || 
+
+       ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') 
+
+    { 
+
+        document.getElementById("result").innerHTML = 
+
+        "Your character is vowel"; 
+
+    } 
+
+    else 
+
+    { 
+
+        document.getElementById("result").innerHTML = 
+
+        "Your character is not a vowel"; 
+
+    } 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 
